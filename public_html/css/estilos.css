@@ -1102,6 +1102,18 @@ header.aboutMe span{
     margin-left: 6vw;
     max-width: 85%;
   }
+  /*SoftLaser*/
+  .softHeader h1 {
+    margin-left: 6vw;
+  }
+  .softHeader .main{
+    margin-bottom: 2em;
+  }
+  .softHeader span {
+    font-size: 2.5vw;
+    margin-left: 6vw;
+    max-width: 85%;
+  }
   /*KINESIOLOGIA*/
   .kinesioHeader h1 {
     margin-left: 6vw;
