@@ -1,0 +1,1154 @@
+@font-face {
+    font-family: 'crimson_textroman';
+    src: url('../fonts/crimsontext-roman-webfont.eot');
+    src: url('../fonts/crimsontext-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/crimsontext-roman-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-roman-webfont.woff') format('woff'),
+         url('../fonts/crimsontext-roman-webfont.ttf') format('truetype'),
+         url('../fonts/crimsontext-roman-webfont.svg#crimson_textroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+html,body{
+	margin:0;
+	height:100%;
+	font-family:'crimson_textroman', serif;
+  font-size: 16px;
+}
+a{
+	color: #8d7188;
+}
+a:focus, a:hover {
+  color: #8d7188;
+  text-decoration: none;
+}
+.noPadding{
+	padding: 0;
+}
+.white{
+	background-color: #fff;
+}
+
+/*MENU NAVEGACIÓN WEB*/
+.nav-trigger {
+  position: fixed;
+  z-index: 100;
+  top: 25px;
+  right: 25px;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+.nav {
+  list-style: none;
+  padding: 0 30px 0 0;
+}
+.nav li {
+  float: left;
+  margin-right: 25px;
+}
+.nav a {
+  font-family: 'crimson_textroman', serif;
+  font-weight: 100;
+  display: block;
+  padding: 9px 0 !important;
+  font-size: 23px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+a.link {
+  position: relative;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #decdc6;
+}
+.nav-open .nav a {
+  -webkit-animation-duration: 3s;
+  	animation-duration: 3s;
+  -webkit-animation-delay: .5s;
+  	animation-delay: .5s;
+  -webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: 1;
+}
+a:hover:after {
+    width: 50%!important;
+}
+a.link:after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #6d2c62;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.nav-container {
+  position: fixed;
+  z-index: 4;
+  top: 15px;
+  right:  5px;
+  height: 57px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 20px;
+  background: rgba(141, 113, 136, .9);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s cubic-bezier(.07, .23, .34, 1);
+  transition: -webkit-transform .5s cubic-bezier(.07, .23, .34, 1);
+  transition: transform .5s cubic-bezier(.07, .23, .34, 1);
+  transition: transform .5s cubic-bezier(.07, .23, .34, 1), -webkit-transform .5s cubic-bezier(.07, .23, .34, 1);
+}
+.nav-open .nav-container {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  display: block!important;
+}
+/*MENU NAVEGACIÓN WEB*/
+
+
+
+/*MENU RESPONSIVE*/
+.navbar-toggle .icon-bar{
+	background-color: #8d7188;
+}
+
+.nav-open .nav-container {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+@media (max-width: 1024px){
+
+	.nav-container {
+    height: 100%;
+    width: 100%;
+    max-width: 220px;
+    max-height: 250px;
+    top: 0;
+    right: 0;
+    min-height: 266px;
+
+	}
+  .nav-container .nav li {
+    float: none!important;
+    margin-right: 0;
+  }
+  .nav-open .nav a{
+    font-size: 1.5em;
+  }
+}
+.menu-global {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 2px solid #6d2c62;
+  width: 100%;
+  transition: 0.55s;
+}
+.menu-top {
+  top: 0;
+}
+.menu-middle {
+  top: 18px;
+}
+.menu-bottom {
+  top: 36px;
+}
+.menu-top-click {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(50deg);
+  transition: 0.55s 0.5s;
+}
+.menu-middle-click {
+  opacity: 0;
+}
+.menu-bottom-click {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(-410deg);
+  transition: 0.55s 0.5s;
+}
+/*-------------------------HEADER--------------------------*/
+body > header.main{
+  padding-top: 3em;
+  top: 0;
+  min-height: 400px;
+  background: url("../img/pexels-photo-13203701.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body > header.main img{
+  margin: 0 auto;
+  width:22%;
+}
+body > header.main h1{
+  display: none;
+  color: #682e65;
+  font-family: 'crimson_textroman', serif;
+  font-size: 6em;
+}
+
+
+/*HEADER DONDE ESTAMOS*/
+body > header.donde{
+  padding-top: 3em;
+  top: 0;
+  min-height: 400px;
+  background: url("../img/donde.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body > header.donde img{
+  margin: 0 auto;
+  width:22%;
+}
+body > header.donde h1{
+  display: none;
+  color: #682e65;
+  font-family: 'crimson_textroman',serif;
+  font-size: 6em;
+}
+/*------------------------------------MAIN-------------------------------------*/
+#arriba{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  background: rgba(104, 46, 101,0.5);
+  cursor: pointer;
+}
+#arriba .glyphicon{
+  color: #fff;
+  top: 14px;
+  font-size: 1.5em;
+  left: 14px;
+}
+.promo img{
+  width: 100%;
+}
+#myModal .modal-content {
+  border-radius: 0;
+}
+#myModal .modal-header{
+  background: white;
+  padding: 5px;
+  border-bottom: none;
+}
+#myModal .modal-header span{
+  font-size: 2.5em;
+  opacity: 1;
+  color: rgba(191, 149, 187,1);
+  margin-right: .3em;
+  font-weight: 100;
+  text-shadow: none;
+}
+/*-----------------------------------------------TERAPIAS----------------------*/
+#terapias header,
+#contacto header{
+  color: #6d2c62;
+  padding-bottom: .3em;
+  border-bottom: 1.5px solid;
+}
+#terapias .row{
+  margin-bottom: 2em;
+}
+.team-div .team-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  background-color: rgba(255, 255, 255, .8);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  padding: 20px;
+}
+.team-div:hover .team-overlay {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.team-overlay h3 {
+  font-size: 25px;
+  text-decoration: none;
+  margin-top: 0;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-transition: all .2s ease-in-out .2s;
+  transition: all .2s ease-in-out .2s;
+  opacity: 0;
+  color:#8d7188;
+}
+.team-overlay:hover h3,
+.team-overlay:hover span {
+  color: #8d7188;
+}
+.team-div:hover .team-overlay h3, .team-div:hover .team-overlay .subtitle, .team-div:hover .team-overlay ul {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.subtitle {
+    color: #999;
+    font-style: italic;
+  text-decoration: none;
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.team-div {
+  position: relative;
+  overflow: hidden;
+}
+
+/*------------------------------------- CONTACTO ---------------------------*/
+#contacto .container{
+  padding: 2em;
+}
+#contacto h3{
+  font-size: 2em;
+}
+.contactoText{
+  color: #8d7188;
+  padding: 1em;
+}
+.contactoText{
+  font-size: 1.3em;
+}
+.contactoText i{
+  font-size: 1.5em;
+  vertical-align: middle;
+  padding-right: .4em;
+}
+#contact_form{
+  background-color: #8d7188;
+  padding: 1em;
+}
+.mat-div {
+  padding: 10px 0 0 0;
+  position: relative;
+}
+.mat-div:after,
+.mat-div:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #e2e2e2;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.is-active .mat-label {
+  color: #999;
+  margin: 0;
+}
+.is-active::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.is-completed .mat-label {
+  font-size: 1.2em;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.mat-label {
+  display: block;
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+  color: #e2e2e2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+.mat-input {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 2px 0;
+  color: #fff;
+}
+.mat-div textarea {
+  resize: none;
+}
+#submit_btn {
+  color: #f5f5f5;
+  background-color: transparent;
+  border: none;
+  margin-top: 30px;
+  outline: none;
+}
+.default-btn {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 0 20px 20px 0;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+.default-btn:after {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #60606e;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.default-btn:hover i {
+  opacity: 1;
+  right: 0;
+}
+.default-btn i {
+  opacity: 0;
+  position: absolute;
+  font-size: 15px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  right: 30px;
+  top: 2px;
+}
+#submit_btn:after {
+  background-color: #f5f5f5;
+}
+.default-btn:hover:after {
+  width: 100%;
+}
+input[type="submit"]{
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 0 20px 20px 0;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  background: transparent;
+  border: 0;
+  color: #e2e2e2;
+  font-size: 1.5em;
+}
+input[type="submit"] + i{
+  opacity: 0;
+  left: -41px;
+  color: #e2e2e2;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+}
+input[type="submit"]:hover + i{
+  opacity: 1;
+  left: 0;
+}
+/*------------------------------------- SOBRE MI ----------------------------*/
+header.aboutMe h1{
+  color: #692f65;
+}
+header.aboutMe img{
+  margin: 0 auto;
+}
+header.aboutMe span:before,
+header.aboutMe span:after{
+  content: "";
+}
+header.aboutMe span{
+  display: block;
+  border-bottom: 2px solid #692f65;
+  height: 1px;
+}
+.about{
+  position: relative;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  background: url(../img/abot.png);
+   background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+.contenedorAbout{
+  background: rgba(255,255,255,0.8);
+  padding: 2em;
+}
+.description{
+  margin-top: 2em;
+}
+.description .img{
+  margin-top: 13%;
+  margin-bottom: 5%;
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  background: url(../img/7944.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.description .text p{
+  font-size: 1.2em;
+}
+
+/*-------------------------------------------------------PAGINA ACUPUNTURA-------------------------------------------------------*/
+
+.topImage{
+  background: url("../img/equilibrium.jpg");
+  height: 100vh;
+  width: 130vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.acupunturaHeader .text-left{
+  position: relative;
+  margin-bottom: 4em;
+}
+.acupunturaHeader h1{
+  color: #6d2c62;
+  font-size: 13vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.acupunturaHeader span{
+  font-family: 'Didact Gothic', sans-serif;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+.descipcionAcupuntura{
+  padding: 3em;
+}
+.descipcionAcupuntura .text{
+  padding: 2em;
+  background-color: rgba(105,47,101,.7);
+  margin-bottom: 3em;
+}
+.descipcionAcupuntura .text h5{
+  font-size: 3em;
+  color: #fff;
+}
+.descipcionAcupuntura .text p{
+  color:#fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+.motivos{
+  list-style: none;
+  display: block;
+  overflow: auto;
+  margin-top: .5em;
+}
+.motivos li{
+  float: left;
+  margin-right: 2.3em;
+  font-size: 1.05em;
+  color: #6d2c62;
+  font-family: 'Didact Gothic', sans-serif;
+}
+.motivos li:before{
+  content: '•';
+  color: #6d2c62;
+  padding-right: .3em;
+}
+.readMoreButton a{
+  background: #6e2d63;
+  border-color: #6e2d63;
+  margin-top: 2em;
+  font-size: 1.2em;
+  margin-left: 2.5em;
+  cursor: pointer;
+  padding: 1.2em;
+  font-family: 'Didact Gothic', sans-serif;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: background .5ms ease-out;
+  -moz-transition: background .5ms ease-out;
+  -o-transition: background .5ms ease-out;
+  transition: background .5ms ease-out;
+}
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary,
+.readMoreButton a:hover,
+.readMoreButton a:active,
+.readMoreButton a:focus,
+.readMoreButton a:visited,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover{
+  color: #fff;
+  background-color: #bf95bb;
+  border-color: #bf95bb;
+}
+#acupuntura .acuUno{
+  background:url("../img/acupuntura2bN.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+#acupuntura .acuDos,
+#acupuntura .acuTres{
+  background-color: #bf95bb;
+}
+#acupuntura .acuDos .text,
+#acupuntura .acuTres .text{
+  padding: 2em;
+  color: #fff;
+  font-size: 1.1em;
+  text-align: justify;
+}
+#acupuntura  .acuDos .text h5,
+#acupuntura  .acuTres .text h5{
+  font-size: 2em;
+  color: #fff;
+}
+/*----------------------------------FLORES DE BACH----------------------------------*/
+.floresHeader .topImage {
+  background: url(../img/flores4.jpg);
+  height: 100vh;
+  width: 130vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.floresHeader h1 {
+  color: #6d2c62;
+  font-size: 9vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.floresHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#flores .acuUno {
+  background: url(../img/flores3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#flores .acuDos {
+  background-color: #6e2d63;
+}
+#flores .text h5{
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+#flores .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+/*-----------------------------------FLORES NIÑOS-----------------------------------*/
+.floresNinosHeader .topImage {
+  background: url(../img/floresNinos.jpg);
+  height: 100vh;
+  width: 130vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.floresNinosHeader h1 {
+  color: #6d2c62;
+  font-size: 9vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.floresNinosHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#floresNinos .acuUno {
+  background: url(../img/floresNinos2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#floresNinos .acuDos {
+  background-color: #6e2d63;
+}
+#floresNinos .text h5{
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+#floresNinos .acuDos h5{
+  margin-top: 2em;
+}
+#floresNinos .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+/*------------------------------------------SoftLaser------------------------------------------*/
+.softHeader .topImage {
+  background: url(../img/softlaser2.jpg);
+  height: 100vh;
+  width: 130vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.softHeader h1 {
+  color: #6d2c62;
+  font-size: 9vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.softHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#softlaser .acuUno {
+  background: url(../img/kine2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#softlaser .acuDos {
+  background-color: #6e2d63;
+}
+#softlaser .text h5{
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+#softlaser .acuDos h5{
+  margin-top: 2em;
+}
+#softlaser .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+/*------------------------------------------KINESIOLOGIA------------------------------------------*/
+.kinesioHeader .topImage {
+  background: url(../img/softlaser2.jpg);
+  height: 100vh;
+  width: 130vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.kinesioHeader h1 {
+  color: #6d2c62;
+  font-size: 9vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.kinesioHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#kinesiologia .acuUno {
+  background: url(../img/kine2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#kinesiologia .acuDos {
+  background-color: #6e2d63;
+}
+#kinesiologia .text h5{
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+#kinesiologia .acuDos h5{
+  margin-top: 2em;
+}
+#kinesiologia .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+/*--------------------------------------BIORRESONANCIA--------------------------------------*/
+.bioHeader .topImage {
+  background: url(../img/bio1.jpg);
+  height: 100vh;
+  width: 133vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.bioHeader h1 {
+  color: #6d2c62;
+  font-size: 9vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.bioHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#biorresonancia .acuUno {
+  background: url(../img/bio.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#biorresonancia .acuDos {
+  background-color: #6e2d63;
+}
+#biorresonancia .text h5{
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+}
+#biorresonancia .acuDos h5{
+  margin-top: 1em;
+}
+#biorresonancia .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+/*------------------------------PSICOLOGIA HOLISTICA------------------------------*/
+.psicoHeader .topImage {
+  background: url(../img/piedra.jpeg);
+  height: 100vh;
+  width: 133vh;
+  opacity: .6;
+  float: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation: collectionSlideShow 25s ease-out 0s;
+  -webkit-animation: collectionSlideShow 25s ease-out 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.psicoHeader h1 {
+  color: #6d2c62;
+  font-size: 7vw;
+  margin-left: -1.1em;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.psicoHeader span {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.5vw;
+  margin-left: 1em;
+  color: #bf95bb;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #bf95bb;
+}
+#psicologia .acuUno {
+  background: url(../img/psico2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#psicologia .acuDos {
+  background-color: #6e2d63;
+}
+#psicologia .acuTres {
+  background-color: #bf95bb;
+  color: #fff;
+  text-align: justify;
+}
+#psicologia .text h5{
+  font-size: 2.5em;
+  color: #fff;
+
+}
+#psicologia .text p {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+.descipcionPsico{
+  padding: 3em;
+}
+.descipcionPsico .text{
+  padding: 2em;
+  background-color: rgba(105,47,101,.7);
+  margin-bottom: 3em;
+}
+.descipcionPsico .text p{
+  color:#fff;
+  font-size: 1.3em;
+  text-align: justify;
+}
+.animate{
+  opacity: 0;
+}
+.mainDonde h6{
+  font-size: 2em;
+  color: #8d7188;
+}
+.mainDonde .map{
+  margin-top: 1em;
+}
+/*------------------------------------MEDIAQUERIES---------------------------*/
+@media (max-width: 1024px){
+  .team-div .team-overlay {
+    opacity: 1!important;
+    bottom: 131px;
+  }
+  .team-div:hover .team-overlay {
+    opacity: 1!important;
+    bottom: 14px;
+  }
+  .team-overlay h3 {
+    margin-top: 15px;
+    opacity: 1!important;
+    font-size: 1.2em;
+  }
+}
+@media  (max-width: 991px){
+  .mainDonde .map{
+    padding: 0 1em 1em;
+    border-bottom: 1px solid #8d7188;
+  }
+  #terapias .row{
+    margin-bottom: 0;
+  }
+  #terapias header{
+    margin-bottom: 2em;
+  }
+
+  /*PAGINA ACUPUNTURA*/
+  .topImage {
+    display: none;
+  }
+  .acupunturaHeader h1,
+  .floresNinosHeader h1{
+    margin-left: 6vw;
+  }
+  .acupunturaHeader .main,
+  .floresNinosHeader .main{
+    margin-bottom: 2em;
+  }
+  .acupunturaHeader span,
+  .floresNinosHeader span{
+    font-size: 2.5vw;
+    margin-left: 6vw;
+  }
+  .readMoreButton{
+    text-align: center;
+  }
+  .readMoreButton a {
+    display: inline-block;
+    margin-left: 0;
+  }
+  /*FLORES DE BACH*/
+  .floresHeader h1 {
+    margin-left: 6vw;
+  }
+  .floresHeader .main{
+    margin-bottom: 2em;
+  }
+  .floresHeader span {
+    font-size: 2.5vw;
+    margin-left: 6vw;
+    max-width: 85%;
+  }
+  /*KINESIOLOGIA*/
+  .kinesioHeader h1 {
+    margin-left: 6vw;
+  }
+  .kinesioHeader .main{
+    margin-bottom: 2em;
+  }
+  .kinesioHeader span {
+    font-size: 2.5vw;
+    margin-left: 6vw;
+    max-width: 85%;
+  }
+  /*BIORRESONANCIA*/
+  .bioHeader h1 {
+    margin-left: 6vw;
+  }
+  .bioHeader .main{
+    margin-bottom: 2em;
+  }
+  .bioHeader span {
+    font-size: 2.5vw;
+    margin-left: 6vw;
+    max-width: 85%;
+  }
+  /*PSICOLOGIA HOLISTICA*/
+  .psicoHeader h1 {
+    margin-left: 6vw;
+  }
+  .psicoHeader .main{
+    margin-bottom: 2em;
+  }
+  .psicoHeader span {
+    font-size: 2.5vw;
+    margin-left: 6vw;
+    max-width: 85%;
+  }
+  .team-div .team-overlay {
+    opacity: 1!important;
+    bottom: 131px;
+  }
+  .team-div:hover .team-overlay {
+    opacity: 1!important;
+    bottom: 14px;
+  }
+  .team-overlay h3 {
+    margin-top: 15px;
+    opacity: 1!important;
+  }
+
+}
